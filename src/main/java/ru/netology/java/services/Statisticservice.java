@@ -1,3 +1,5 @@
+package ru.netology.java.services;
+
 public class Statisticservice {
     public int minSales(long[] sales) {
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
