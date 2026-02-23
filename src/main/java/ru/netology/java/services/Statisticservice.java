@@ -25,7 +25,7 @@ public class Statisticservice {
         return maxMonth + 1;
     }
 
-    public int sumSales(long[] sales) {
+    public long sumSales(long[] sales) {
         int sumSales = 0;
         for (long value : sales) {
             sumSales += value;

@@ -26,7 +26,7 @@ public class TestStat {
     @Test
     public void test3() {
         Statisticservice service = new Statisticservice();
-        int actual = service.sumSales(sales);
+        long actual = service.sumSales(sales);
         int count = 164;
         Assertions.assertEquals(count, actual);
     }
