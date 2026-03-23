@@ -1,7 +1,7 @@
 package ru.netology.java.services;
 
 public class Statisticservice {
-    public long minSales(long[] sales) {
+    public int minSales(long[] sales) {
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
         for (int i = 0; i < sales.length; i++) {
@@ -13,7 +13,7 @@ public class Statisticservice {
         return minMonth + 1; // месяца нумеруются с 1, а индексы массива с 0, нужно сдвинуть ответ на 1
     }
 
-    public long maxSales(long[] sales) {
+    public int maxSales(long[] sales) {
         int maxMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
         for (int i = 0; i < sales.length; i++) {
@@ -26,7 +26,7 @@ public class Statisticservice {
     }
 
     public long sumSales(long[] sales) {
-        int sumSales = 0;
+        long sumSales = 0;
         for (long value : sales) {
             sumSales += value;
         }
@@ -34,17 +34,17 @@ public class Statisticservice {
     }
 
     public long summediumSales(long[] sales) {
-        int sumSales = 0;
+        long sumSales = 0;
         for (long value : sales) {
             sumSales += value;
         }
-        int averageSales = sumSales / 12;
+        long averageSales = sumSales / 12;
         return averageSales;
     }
 
     public long numberOfMonthsBelowAverage(long[] sales) {
         double average = averageSales(sales);
-        int count = 0;
+        long count = 0;
         for (long s : sales) {
             if (s < average) {
                 count++;
@@ -63,7 +63,7 @@ public class Statisticservice {
 
     public long numberOfMonthsMoreAverage(long[] sales) {
         double average = averageSales(sales);
-        int count = 0;
+        long count = 0;
         for (long s : sales) {
             if (s > average) {
                 count++;

@@ -10,7 +10,7 @@ public class TestStat {
     @Test
     public void test1() {
         Statisticservice service = new Statisticservice();
-        long actual = service.minSales(sales);
+        int actual = service.minSales(sales);
         int count = 10;
         Assertions.assertEquals(count, actual);
     }
@@ -19,7 +19,7 @@ public class TestStat {
     @Test
     public void test2() {
         Statisticservice service = new Statisticservice();
-        long actual = service.maxSales(sales);
+        int actual = service.maxSales(sales);
         int count = 6;
         Assertions.assertEquals(count, actual);
     }
@@ -27,28 +27,28 @@ public class TestStat {
     public void test3() {
         Statisticservice service = new Statisticservice();
         long actual = service.sumSales(sales);
-        int count = 164;
+        long count = 164;
         Assertions.assertEquals(count, actual);
     }
     @Test
     public void test4() {
         Statisticservice service = new Statisticservice();
         long actual = service.summediumSales(sales);
-        int count = 13;
+        long count = 13;
         Assertions.assertEquals(count, actual);
     }
     @Test
     public void test5() {
         Statisticservice service = new Statisticservice();
         long actual = service.numberOfMonthsBelowAverage(sales);
-        int count = 5;
+        long count = 5;
         Assertions.assertEquals(count, actual);
     }
     @Test
     public void test6() {
         Statisticservice service = new Statisticservice();
         long actual = service.numberOfMonthsMoreAverage(sales);
-        int count = 7;
+        long count = 7;
         Assertions.assertEquals(count, actual);
     }
 
